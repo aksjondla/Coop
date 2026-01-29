@@ -1,11 +1,11 @@
 #include <Windows.h>
 #include <iostream>
-#include "console/console.hpp"
+#include "../console/console.hpp"
 
-#include "hooks/hooks.hpp"
-#include "utils/utils.hpp"
+#include "../hooks/hooks.hpp"
+#include "../utils/utils.hpp"
 
-#include "dependencies/minhook/MinHook.h"
+#include "../dependencies/minhook/MinHook.h"
 DWORD WINAPI OnProcessAttach(LPVOID lpParam);
 DWORD WINAPI OnProcessDetach(LPVOID lpParam);
 

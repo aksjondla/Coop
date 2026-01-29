@@ -4,6 +4,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{A9B65F2F-CC2E-4A73-8E24-59F00B9A1D9E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{D4C8C6B3-8A3F-4A1B-9F7B-2A9E4E5D6F10}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\console">
       <UniqueIdentifier>{E8C0A6A6-90B7-4E64-9C21-1C0F0B7E09B6}</UniqueIdentifier>
     </Filter>
@@ -36,8 +39,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="src\core\dllmain.cpp">
+      <Filter>src\core</Filter>
     </ClCompile>
     <ClCompile Include="src\console\console.cpp">
       <Filter>src\console</Filter>
@@ -77,8 +80,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\backend.hpp">
-      <Filter>src</Filter>
+    <ClInclude Include="src\core\backend.hpp">
+      <Filter>src\core</Filter>
     </ClInclude>
     <ClInclude Include="src\console\console.hpp">
       <Filter>src\console</Filter>
