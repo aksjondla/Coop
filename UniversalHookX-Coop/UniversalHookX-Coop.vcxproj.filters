@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{A9B65F2F-CC2E-4A73-8E24-59F00B9A1D9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\console">
+      <UniqueIdentifier>{E8C0A6A6-90B7-4E64-9C21-1C0F0B7E09B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{B5AD9B7B-5A6E-4F2A-A56D-8B5BD1A7E5F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks">
+      <UniqueIdentifier>{F5C7B8C6-0D2C-4F19-B0B0-98F4C2A6C0B5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\backend">
+      <UniqueIdentifier>{0A5C5802-9C22-4B8F-A1D6-47D3C0F59A1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\backend\dx9">
+      <UniqueIdentifier>{B2F7C746-2B4B-4F58-9E5C-7E8B9F4A9F0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\backend\dx9\hook_manager">
+      <UniqueIdentifier>{A11E3D4E-5C3E-4F29-8B9A-2C6A8B4C9E3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\backend\ImDui">
+      <UniqueIdentifier>{C2E2B8D9-2B8D-4F7C-9C1F-3B8A7A4D8E2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dependencies">
+      <UniqueIdentifier>{9D64A1E2-3A9C-4F16-9E24-8F8B3C6A2D7C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dependencies\minhook">
+      <UniqueIdentifier>{E07B7C3D-8C57-4F9E-8C7A-4C8C6F7E3A9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dependencies\minhook\hde">
+      <UniqueIdentifier>{6D8A4C3B-2E7A-4C9F-8A5D-4F2B9C7E1D6A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\console\console.cpp">
+      <Filter>src\console</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\utils.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\hooks.cpp">
+      <Filter>src\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\p2_input.cpp">
+      <Filter>src\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\backend\dx9\overlay.cpp">
+      <Filter>src\hooks\backend\dx9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\backend\dx9\hook_manager\hook_manager.cpp">
+      <Filter>src\hooks\backend\dx9\hook_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\backend\ImDui\ImDui.cpp">
+      <Filter>src\hooks\backend\ImDui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dependencies\minhook\buffer.c">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dependencies\minhook\hook.c">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dependencies\minhook\trampoline.c">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dependencies\minhook\hde\hde32.c">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dependencies\minhook\hde\hde64.c">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\backend.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\console\console.hpp">
+      <Filter>src\console</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\utils.hpp">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\hooks.hpp">
+      <Filter>src\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\p2_input.hpp">
+      <Filter>src\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\backend\dx9\overlay.hpp">
+      <Filter>src\hooks\backend\dx9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\backend\dx9\hook_manager\hook_manager.hpp">
+      <Filter>src\hooks\backend\dx9\hook_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\backend\ImDui\imdui.h">
+      <Filter>src\hooks\backend\ImDui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\buffer.h">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\MinHook.h">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\trampoline.h">
+      <Filter>src\dependencies\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\hde\hde32.h">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\hde\hde64.h">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\hde\pstdint.h">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\hde\table32.h">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dependencies\minhook\hde\table64.h">
+      <Filter>src\dependencies\minhook\hde</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
