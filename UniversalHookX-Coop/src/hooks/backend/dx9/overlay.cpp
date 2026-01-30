@@ -4,6 +4,7 @@
 
 #include "../../../console/console.hpp"
 #include "../ImDui/imdui.h"
+#include "../../../core/coop_config.hpp"
 
 #include <d2d1.h>
 #include <dwrite.h>
@@ -266,14 +267,18 @@ DWORD WINAPI Overlay::OverlayThread(LPVOID) {
 	SetTimer(hwndOverlay, 1, 16, NULL);
 
 	MSG msg;
-	bool prevF1 = false;
+	bool prevMenu = false;
+	int menuKey = CoopConfig::Get( ).key_menu;
+	if (menuKey == 0) {
+		menuKey = VK_F1;
+	}
 	while (bOverlayRunning) {
 		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
-		bool f1Down = (GetAsyncKeyState(VK_F1) & 0x8000) != 0;
-		if (f1Down && !prevF1) {
+		bool menuDown = (GetAsyncKeyState(menuKey) & 0x8000) != 0;
+		if (menuDown && !prevMenu) {
 			g_menuOpen = !g_menuOpen;
 			SetWindowLong(hwndOverlay, GWL_EXSTYLE,
 			              g_menuOpen ? (GetWindowLong(hwndOverlay, GWL_EXSTYLE) & ~WS_EX_TRANSPARENT)
@@ -281,7 +286,7 @@ DWORD WINAPI Overlay::OverlayThread(LPVOID) {
 			SetWindowPos(hwndOverlay, NULL, 0, 0, 0, 0,
 			             SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED | SWP_NOACTIVATE);
 		}
-		prevF1 = f1Down;
+		prevMenu = menuDown;
 		Sleep(1);
 	}
 

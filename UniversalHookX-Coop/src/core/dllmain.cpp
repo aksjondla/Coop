@@ -3,6 +3,7 @@
 #include "../console/console.hpp"
 
 #include "../hooks/hooks.hpp"
+#include "../core/coop_config.hpp"
 #include "../utils/utils.hpp"
 
 #include "../dependencies/minhook/MinHook.h"
@@ -27,7 +28,10 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
 }
 
 DWORD WINAPI OnProcessAttach(LPVOID lpParam) {
-    Console::Alloc( );
+    const auto& cfg = CoopConfig::Get( );
+    if (cfg.show_console) {
+        Console::Alloc( );
+    }
     LOG("[+] Rendering backend: %s\n", U::RenderingBackendToStr( ));
     if (U::GetRenderingBackend( ) == NONE) {
         LOG("[!] Looks like you forgot to set a backend. Will unload after pressing enter...");

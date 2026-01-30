@@ -42,6 +42,9 @@
     <ClCompile Include="src\core\dllmain.cpp">
       <Filter>src\core</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\coop_config.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
     <ClCompile Include="src\console\console.cpp">
       <Filter>src\console</Filter>
     </ClCompile>
@@ -81,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\backend.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\coop_config.hpp">
       <Filter>src\core</Filter>
     </ClInclude>
     <ClInclude Include="src\console\console.hpp">

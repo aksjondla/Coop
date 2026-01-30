@@ -5,6 +5,7 @@
 #include <cstdio>
 
 #include "../core/backend.hpp"
+#include "../core/coop_config.hpp"
 
 #ifdef ENABLE_BACKEND_DX9
 #include "backend/dx9/hook_manager/hook_manager.hpp"
@@ -24,20 +25,21 @@ namespace {
 	bool g_ruby_installed = false;
 
 	uint32_t PollMask() {
+		const auto& cfg = CoopConfig::Get( );
 		uint32_t mask = 0u;
-		if ((GetAsyncKeyState('I') & 0x8000) != 0) {
+		if (cfg.key_up && (GetAsyncKeyState(cfg.key_up) & 0x8000) != 0) {
 			mask |= kUp;
 		}
-		if ((GetAsyncKeyState('J') & 0x8000) != 0) {
+		if (cfg.key_left && (GetAsyncKeyState(cfg.key_left) & 0x8000) != 0) {
 			mask |= kLeft;
 		}
-		if ((GetAsyncKeyState('K') & 0x8000) != 0) {
+		if (cfg.key_down && (GetAsyncKeyState(cfg.key_down) & 0x8000) != 0) {
 			mask |= kDown;
 		}
-		if ((GetAsyncKeyState('L') & 0x8000) != 0) {
+		if (cfg.key_right && (GetAsyncKeyState(cfg.key_right) & 0x8000) != 0) {
 			mask |= kRight;
 		}
-		if ((GetAsyncKeyState('T') & 0x8000) != 0) {
+		if (cfg.key_attack && (GetAsyncKeyState(cfg.key_attack) & 0x8000) != 0) {
 			mask |= kAttack;
 		}
 		return mask;
