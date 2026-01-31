@@ -20,6 +20,8 @@ namespace {
 	HANDLE hOverlayThread = NULL;
 	bool bOverlayRunning = true;
 	bool g_menuOpen = false;
+	const char* kProjectVersion = "0.1.0-alpha";
+	const char* kProjectStatus = "Early build (raw)";
 
 	ID2D1Factory* pD2DFactory = NULL;
 	ID2D1DCRenderTarget* pRenderTarget = NULL;
@@ -179,7 +181,9 @@ void Overlay::RenderFrame( ) {
 	ImDui::NewFrame( );
 	if (g_menuOpen) {
 		bool show = true;
-		ImDui::BeginWindow("UHX Coop", &show, ImFloat2(20, 20), ImFloat2(280, 120));
+		ImDui::BeginWindow("UHX Coop", &show, ImFloat2(20, 20), ImFloat2(280, 150));
+		ImDui::Text("Version: %s", kProjectVersion);
+		ImDui::Text("Status: %s", kProjectStatus);
 		ImDui::Text("Coop active");
 		ImDui::Text("P2: I/J/K/L + T");
 		ImDui::Text("F1: toggle UI");
